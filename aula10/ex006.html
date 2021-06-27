@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,47 +8,47 @@
     <title>Eventos DOM</title>
     <style>
         div#area {
-           font: normal 20pt Arial;
-           background: green;
-           color: white;
-           width: 200px;
-           height: 200px;
-           line-height: 200px;
-           text-align: center;
-
-
+            font: normal 20pt Arial;
+            background: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
         }
     </style>
 </head>
+
 <body>
-    <div id="area" onmouseenter="entrar()" onclick="clicar()" onmouseout="sair()" >
-     Interaja...
+    <div id="area" onmouseenter="entrar()" onclick="clicar()" onmouseout="sair()">
+        Interaja...
 
     </div>
 
     <script>
-    var a = document.getElementById('area');
-    a.addEventListener('click',clicar)
-    a.addEventListener('mouseenter',entrar)
-    a.addEventListener('mouseout',sair)
+        var a = document.getElementById('area');
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
 
-        function entrar(){
+        function entrar() {
             a.innerText = "entrou!";
             a.style.background = 'blue'
-        
+
         }
 
-        function clicar(){
+        function clicar() {
             a.innerText = "clicou!";
             a.style.background = 'red'
 
         }
 
-        function sair(){
+        function sair() {
             a.innerText = "saiu!";
             a.style.background = 'green'
         }
     </script>
-    
+
 </body>
+
 </html>
